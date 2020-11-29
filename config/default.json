@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://admin:amanthakkar@botcluster.evshi.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb://admin:amanthakkar@botcluster-shard-00-00.evshi.mongodb.net:27017,botcluster-shard-00-01.evshi.mongodb.net:27017,botcluster-shard-00-02.evshi.mongodb.net:27017/test?ssl=true&replicaSet=atlas-zpoht3-shard-0&authSource=admin&retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
