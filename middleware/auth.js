@@ -17,7 +17,7 @@ module.exports = function (req, res, next) {
     req.user = decoded.user; //now middleware has req.user storing the whole user object
     //visit jwt website to view what the user looks like (it is just an object with one 'id' field right now - the payload)
     console.log(req.user);
-    next();
+    next(); //called at end of middleware if you actually want to execute next part
   } catch (err) {
     res.status(401).json({ msg: 'Token is not valid' });
   }

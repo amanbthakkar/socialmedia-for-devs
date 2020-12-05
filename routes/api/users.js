@@ -56,8 +56,9 @@ router.post(
 
       //Encrypt password
       const salt = await bcrypt.genSalt(10);
-      user.password = await bcrypt.hash(password, salt);
+      user.password = await bcrypt.hash(password, salt); //add password attribute to user object
       let doc = await user.save(); //this actually saves the user to database, hence await
+      
       //Return jsonwebtoken - after creating user want him to be immediately logged in
       //console.log('Doc is ' + doc);
       const payload = {
